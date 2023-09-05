@@ -1,4 +1,4 @@
-#include "IRDiode.hpp"
+#include "IRDiode.h"
 
 IRDiode::IRDiode(byte pin )
 {
@@ -18,6 +18,6 @@ void IRDiode::operator()()
         IrReceiver.resume();
     }
     else{
-        Serial.println("No IR");
+        // Serial.println("No IR");
     }
 }
