@@ -129,9 +129,28 @@ void Color::set(float hue, byte saturation, int value){
         break;
     }
 }
+/// @brief Sets color from hex string
+void Color::set(std::string hex)
+{
+    byte r, g, b;
 
+    sscanf(hex.c_str(), "%02x%02x%02x", &r, &g, &b);
+    
+    setRed(r);
+    setGreen(g);
+    setBlue(b);
+}
+/// @brief Creates a color from HSV values
 Color Color::fromHSV(float hue, byte saturation, int value){
     Color color;
     color.set(hue, saturation, value);
+    return color;
+}
+
+/// @brief Creates a color from a hex string
+Color Color::fromHex(std::string hex)
+{
+    Color color;
+    color.set(hex);
     return color;
 }
