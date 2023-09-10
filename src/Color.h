@@ -24,6 +24,7 @@ public:
     void set(byte red, byte green, byte blue, int brightness = -1);
     void set(float hue, byte saturation, int value = -1);
     void set(std::string hex);
+    void set(Color& color);
 
     static Color fromHSV(float hue, byte saturation, int value);
     static Color fromHex(std::string hex);

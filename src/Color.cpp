@@ -140,6 +140,15 @@ void Color::set(std::string hex)
     setGreen(g);
     setBlue(b);
 }
+
+/// @brief Sets color from another color
+void Color::set(Color& color)
+{
+    setRed(color.getRed());
+    setGreen(color.getGreen());
+    setBlue(color.getBlue());
+    setBrightness(color.brightness);
+}
 /// @brief Creates a color from HSV values
 Color Color::fromHSV(float hue, byte saturation, int value){
     Color color;

@@ -14,7 +14,7 @@ public:
     RGBController(byte redPin, byte greenPin, byte bluePin);
     RGBController(byte redPin, byte greenPin, byte bluePin, Color color);
     void setColor(Color color);
-    void getColor();
+    Color getColor();
     void updatePins();
 
 private:
