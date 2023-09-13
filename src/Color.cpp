@@ -8,6 +8,148 @@ Color::Color()
     this->brightness = 100;
 }
 
+Color Color::Red()
+{
+    Color color;
+    color.setRed(255);
+    return color;
+}
+
+Color Color::Green()
+{
+    Color color;
+    color.setGreen(255);
+    return color;
+}
+
+Color Color::Blue()
+{
+    Color color;
+    color.setBlue(255);
+    return color;
+}
+
+Color Color::White()
+{
+    Color color;
+    color.setRed(255);
+    color.setGreen(255);
+    color.setBlue(255);
+    return color;
+}
+
+Color Color::C1()
+{
+    Color color;
+    color.set("FF0F00");
+    return color;
+}
+
+Color Color::C2()
+{
+    Color color;
+    color.set("05FF05");
+    return color;
+}
+
+Color Color::C3()
+{
+    Color color;
+    color.set("0A0AFF");
+    return color;
+}
+
+Color Color::C4()
+{
+    Color color;
+    color.set("FF1464");
+    return color;
+}
+
+Color Color::C5()
+{
+    Color color;
+    color.set("FF1600");
+    return color;
+}
+
+Color Color::C6()
+{
+    Color color;
+    color.set("5959FF");
+    return color;
+}
+
+Color Color::C7()
+{
+    Color color;
+    color.set("B300FF");
+    return color;
+}
+
+Color Color::C8()
+{
+    Color color;
+    color.set("FF3277");
+    return color;
+}
+
+Color Color::C9()
+{
+    Color color;
+    color.set("FF2600");
+    return color;
+}
+
+Color Color::C10()
+{
+    Color color;
+    color.set("004F00");
+    return color;
+}
+
+Color Color::C11()
+{
+    Color color;
+    color.set("B300CF");
+    return color;
+}
+
+Color Color::C12()
+{
+    Color color;
+    color.set("4949FF");
+    return color;
+}
+
+Color Color::C13()
+{
+    Color color;
+    color.set("FF6600");
+    return color;
+}
+
+Color Color::C14()
+{
+    Color color;
+    color.set("001F00");
+    return color;
+}
+
+Color Color::C15()
+{
+    Color color;
+    color.set("E600FF");
+    return color;
+}
+
+Color Color::C16()
+{
+    Color color;
+    color.set("6969FF");
+    return color;
+}
+
 Color::~Color()
 {
 
