@@ -194,9 +194,11 @@ void RGBController::turnOnOff()
         this->setBluePinValue(0);
         this->setGreenPinValue(0);
         this->setRedPinValue(0);
+        this->isOn = false;
     }
     else{
         this->setColor(this->color);
+        this->isOn = true;
     }
     
 }
