@@ -3,39 +3,73 @@
 
 #pragma once
 #include "Color.h"
+#include <string>
 
 class Task
 {
 public:
     ~Task();
-    static Task Rainbow();
-    static Task Blink();
-    static Task Fade3();
-    static Task Fade7();
-    static Task Jump3();
-    static Task Jump7();
-    static Task DIY1();
-    static Task DIY2();
-    static Task DIY3();
-    static Task DIY4();
-    static Task DIY5();
-    static Task DIY6();
-    static Task ChangeColor(Color color);
+    static Task* Rainbow();
+    static Task* Blink();
+    static Task* Fade3();
+    static Task* Fade7();
+    static Task* Jump3();
+    static Task* Jump7();
+    static Task* DIY1();
+    static Task* DIY2();
+    static Task* DIY3();
+    static Task* DIY4();
+    static Task* DIY5();
+    static Task* DIY6();
+    static Task* ChangeColor(Color color);
     
-    static Task Pause();
-    static Task Brighter();
-    static Task Darker();
-    static Task OnOff();
+    static Task* Pause();
+    static Task* Brighter();
+    static Task* Darker();
+    static Task* OnOff();
 
-    static Task RedUp();
-    static Task RedDown();
-    static Task GreenUp();
-    static Task GreenDown();
-    static Task BlueUp();
-    static Task BlueDown();
+    static Task* RedUp();
+    static Task* RedDown();
+    static Task* GreenUp();
+    static Task* GreenDown();
+    static Task* BlueUp();
+    static Task* BlueDown();
 
-    static Task Quick();
-    static Task Slow();
+    static Task* Quick();
+    static Task* Slow();
+
+    bool isRainbow();
+    bool isBlink();
+    bool isFade3();
+    bool isFade7();
+    bool isJump3();
+    bool isJump7();
+    bool isDIY1();
+    bool isDIY2();
+    bool isDIY3();
+    bool isDIY4();
+    bool isDIY5();
+    bool isDIY6();
+    bool isChangeColor();
+
+    bool isPause();
+    bool isBrighter();
+    bool isDarker();
+    bool isOnOff();
+
+    bool isRedUp();
+    bool isRedDown();
+    bool isGreenUp();
+    bool isGreenDown();
+    bool isBlueUp();
+    bool isBlueDown();
+
+    bool isQuick();
+    bool isSlow();
+
+    Color getColor();
+
+    std::string toString();
 
 protected:
     Task();

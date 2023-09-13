@@ -8,6 +8,7 @@
 #define USE_IRREMOTE_HPP_AS_PLAIN_INCLUDE
 #include <IRremote.hpp>
 #include "IRControlCode.h"
+#include "Task.h"
 
 
 class IRControl
@@ -15,7 +16,7 @@ class IRControl
 public:
     IRControl(int pin);
     ~IRControl();
-    IRControlCode tick();
+    Task* tick();
     
 private:
 

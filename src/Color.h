@@ -15,6 +15,7 @@ public:
     byte getRed();
     byte getGreen();
     byte getBlue();
+    byte getBrightness();
 
     void setRed(byte red);
     void setGreen(byte green);
@@ -25,6 +26,7 @@ public:
     void set(float hue, byte saturation, int value = -1);
     void set(std::string hex);
     void set(Color& color);
+    std::string toString();
 
     static Color fromHSV(float hue, byte saturation, int value);
     static Color fromHex(std::string hex);
@@ -50,6 +52,7 @@ public:
     static Color C14();
     static Color C15();
     static Color C16();
+
 
 
 

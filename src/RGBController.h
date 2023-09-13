@@ -4,6 +4,7 @@
 #pragma once
 #include <Arduino.h>
 #include "Color.h"
+#include "Task.h"
 
 /// @brief class for controlling RGB LED strip
 class RGBController
@@ -16,6 +17,13 @@ public:
     void setColor(Color color);
     Color getColor();
     void updatePins();
+    void turnOnOff();
+
+    void setTask( Task* task);
+    void clearTask();
+
+    void tick();
+
 
 private:
     Color color;
@@ -23,10 +31,13 @@ private:
     byte greenPin;
     byte bluePin;
 
+    Task* task;
+    
+    bool isOn;
+
     void setRedPinValue(byte red);
     void setGreenPinValue(byte green);
     void setBluePinValue(byte blue);
-
 };
 
 #endif

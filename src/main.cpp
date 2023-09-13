@@ -1,7 +1,8 @@
 #include <Arduino.h>
 #include <IRremote.hpp>
 #include "IRControl.h"
-
+#include "Task.h"
+#include "RGBController.h"
 
 void IRControlCodetoString(IRControlCode code)
 {
@@ -151,17 +152,22 @@ void IRControlCodetoString(IRControlCode code)
   }
 }
 
+
 IRControl* ir; // IR diode on pin 5
+RGBController* rgb;
+
 void setup() {
   Serial.begin(115200);
   ir = new IRControl(5);
+  rgb = new RGBController(0, 1, 2);
 }
-IRControlCode lastCode = IRControlCode::NIC;
+
 void loop() {
-  IRControlCode code = ir->tick();
-  if (code != lastCode)
+  Task* task = ir->tick();
+  if (task != nullptr)
   {
-    lastCode = code;
-    IRControlCodetoString(code);
+    Serial.println(task->toString().c_str());
+    rgb->setTask(task);
   }
+  rgb->tick();
 }

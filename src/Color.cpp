@@ -41,7 +41,9 @@ Color Color::White()
 Color Color::C1()
 {
     Color color;
+    Serial.println("C1");
     color.set("FF0F00");
+    Serial.println("C2");
     return color;
 }
 
@@ -178,6 +180,11 @@ byte Color::getBlue()
 {
     return this->blue * this->brightness / 100;
 }
+/// @brief Gets brightness of the color
+byte Color::getBrightness()
+{
+    return this->brightness;
+}
 /// @brief Sets red value of the color
 ///
 /// @param red (0, 255)
@@ -274,7 +281,7 @@ void Color::set(float hue, byte saturation, int value){
 /// @brief Sets color from hex string
 void Color::set(std::string hex)
 {
-    byte r, g, b;
+    int r=0, g=0, b=0;
 
     sscanf(hex.c_str(), "%02x%02x%02x", &r, &g, &b);
     
@@ -290,6 +297,18 @@ void Color::set(Color& color)
     setGreen(color.getGreen());
     setBlue(color.getBlue());
     setBrightness(color.brightness);
+}
+std::string Color::toString()
+{
+    std::string str = "#";
+    char hex[3];
+    sprintf(hex, "%02x", getRed());
+    str += hex;
+    sprintf(hex, "%02x", getGreen());
+    str += hex;
+    sprintf(hex, "%02x", getBlue());
+    str += hex;
+    return str;
 }
 /// @brief Creates a color from HSV values
 Color Color::fromHSV(float hue, byte saturation, int value){

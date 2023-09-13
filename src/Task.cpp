@@ -11,181 +11,410 @@ Task::~Task()
 
 }
 
-Task Task::Rainbow()
+Task* Task::Rainbow()
 {
-    Task task;
-    task.setRainbow();
+    Task* task=new Task;
+    task->setRainbow();
     return task;
 }
 
-Task Task::Blink()
+Task* Task::Blink()
 {
-    Task task;
-    task.setBlink();
+    Task* task=new Task;
+    task->setBlink();
     return task;
 }
 
-Task Task::Fade3()
+Task* Task::Fade3()
 {
-    Task task;
-    task.setFade3();
+    Task* task=new Task;
+    task->setFade3();
     return task;
 }
 
-Task Task::Fade7()
+Task* Task::Fade7()
 {
-    Task task;
-    task.setFade7();
+    Task* task=new Task;
+    task->setFade7();
     return task;
 }
 
-Task Task::Jump3()
+Task* Task::Jump3()
 {
-    Task task;
-    task.setJump3();
+    Task* task=new Task;
+    task->setJump3();
     return task;
 }
 
-Task Task::Jump7()
+Task* Task::Jump7()
 {
-    Task task;
-    task.setJump7();
+    Task* task=new Task;
+    task->setJump7();
     return task;
 }
 
-Task Task::DIY1()
+Task* Task::DIY1()
 {
-    Task task;
-    task.setDIY1();
+    Task* task=new Task;
+    task->setDIY1();
     return task;
 }
 
-Task Task::DIY2()
+Task* Task::DIY2()
 {
-    Task task;
-    task.setDIY2();
+    Task* task=new Task;
+    task->setDIY2();
     return task;
 }
 
-Task Task::DIY3()
+Task* Task::DIY3()
 {
-    Task task;
-    task.setDIY3();
+    Task* task=new Task;
+    task->setDIY3();
     return task;
 }
 
-Task Task::DIY4()
+Task* Task::DIY4()
 {
-    Task task;
-    task.setDIY4();
+    Task* task=new Task;
+    task->setDIY4();
     return task;
 }
 
-Task Task::DIY5()
+Task* Task::DIY5()
 {
-    Task task;
-    task.setDIY5();
+    Task* task=new Task;
+    task->setDIY5();
     return task;
 }
 
-Task Task::DIY6()
+Task* Task::DIY6()
 {
-    Task task;
-    task.setDIY6();
+    Task* task=new Task;
+    task->setDIY6();
     return task;
 }
 
-Task Task::ChangeColor(Color color)
+Task* Task::ChangeColor(Color color)
 {
-    Task task;
-    task.setChangeColor();
-    task.color = color;
+    Serial.println("Cons ChangeColor");
+    Task* task=new Task;
+    task->setChangeColor();
+    Serial.println(task->isChangeColor());
+    task->color = color;
     return task;
 }
 
-Task Task::Pause()
+Task* Task::Pause()
 {
-    Task task;
-    task.setPause();
+    Task* task=new Task;
+    task->setPause();
     return task;
 }
 
-Task Task::Brighter()
+Task* Task::Brighter()
 {
-    Task task;
-    task.setBrighter();
+    Task* task=new Task;
+    task->setBrighter();
     return task;
 }
 
-Task Task::Darker()
+Task* Task::Darker()
 {
-    Task task;
-    task.setDarker();
+    Task* task=new Task;
+    task->setDarker();
     return task;
 }
 
-Task Task::OnOff()
+Task* Task::OnOff()
 {
-    Task task;
-    task.setOnOff();
+    Task* task=new Task;
+    task->setOnOff();
     return task;
 }
 
-Task Task::RedUp()
+Task* Task::RedUp()
 {
-    Task task;
-    task.setRedUp();
+    Task* task=new Task;
+    task->setRedUp();
     return task;
 }
 
-Task Task::RedDown()
+Task* Task::RedDown()
 {
-    Task task;
-    task.setRedDown();
+    Task* task=new Task;
+    task->setRedDown();
     return task;
 }
 
-Task Task::GreenUp()
+Task* Task::GreenUp()
 {
-    Task task;
-    task.setGreenUp();
+    Task* task=new Task;
+    task->setGreenUp();
     return task;
 }
 
-Task Task::GreenDown()
+Task* Task::GreenDown()
 {
-    Task task;
-    task.setGreenDown();
+    Task* task=new Task;
+    task->setGreenDown();
     return task;
 }
 
-Task Task::BlueUp()
+Task* Task::BlueUp()
 {
-    Task task;
-    task.setBlueUp();
+    Task* task=new Task;
+    task->setBlueUp();
     return task;
 }
 
-Task Task::BlueDown()
+Task* Task::BlueDown()
 {
-    Task task;
-    task.setBlueDown();
+    Task* task=new Task;
+    task->setBlueDown();
     return task;
 }
 
-Task Task::Quick()
+Task* Task::Quick()
 {
-    Task task;
-    task.setQuick();
+    Task* task=new Task;
+    task->setQuick();
     return task;
 }
 
-Task Task::Slow()
+Task* Task::Slow()
 {
-    Task task;
-    task.setSlow();
+    Task* task=new Task;
+    task->setSlow();
     return task;
 }
+
+bool Task::isRainbow()
+{
+    return doRainbow;
+}
+
+bool Task::isBlink()
+{
+    return doBlink;
+}
+
+bool Task::isFade3()
+{
+    return doFade3;
+}
+
+bool Task::isFade7()
+{
+    return doFade7;
+}
+
+bool Task::isJump3()
+{
+    return doJump3;
+}
+
+bool Task::isJump7()
+{
+    return doJump7;
+}
+
+bool Task::isDIY1()
+{
+    return doDIY1;
+}       
+
+bool Task::isDIY2()
+{
+    return doDIY2;
+}
+
+bool Task::isDIY3()
+{
+    return doDIY3;
+}
+
+bool Task::isDIY4()
+{
+    return doDIY4;
+}
+
+bool Task::isDIY5()
+{
+    return doDIY5;
+}
+
+bool Task::isDIY6()
+{
+    return doDIY6;
+}
+
+bool Task::isChangeColor()
+{
+    return doChangeColor;
+}
+
+bool Task::isPause()
+{
+    return doPause;
+}
+
+bool Task::isBrighter()
+{
+    return doBrighter;
+}
+
+bool Task::isDarker()
+{
+    return doDarker;
+}
+
+bool Task::isOnOff()
+{
+    return doOnOff;
+}
+
+bool Task::isRedUp()
+{
+    return doRedUp;
+}
+
+bool Task::isRedDown()
+{
+    return doRedDown;
+}
+
+bool Task::isGreenUp()
+{
+    return doGreenUp;
+}
+
+bool Task::isGreenDown()
+{
+    return doGreenDown;
+}
+
+bool Task::isBlueUp()
+{
+    return doBlueUp;
+}
+
+bool Task::isBlueDown()
+{
+    return doBlueDown;
+}
+
+bool Task::isQuick()
+{
+    return doQuick;
+}
+
+bool Task::isSlow()
+{
+    return doSlow;
+}
+
+Color Task::getColor()
+{
+    return color;
+}
+
+std::string Task::toString()
+{
+    std::string str ="";
+    str += "Task: ";
+    if (isChangeColor())
+    {
+        str += "ChangeColor, color: ";
+        str += color.toString();
+    }
+    else if (isOnOff())
+    {
+        str += "OnOff";
+    }
+    else if (isBrighter())
+    {
+        str += "Brighter";
+    }
+    else if (isDarker())
+    {
+        str += "Darker";
+    }
+    else if (isRedUp())
+    {
+        str += "RedUp";
+    }
+    else if (isRedDown())
+    {
+        str += "RedDown";
+    }
+    else if (isGreenUp())
+    {
+        str += "GreenUp";
+    }
+    else if (isGreenDown())
+    {
+        str += "GreenDown";
+    }
+    else if (isBlueUp())
+    {
+        str += "BlueUp";
+    }
+    else if (isBlueDown())
+    {
+        str += "BlueDown";
+    }
+    else if (isQuick())
+    {
+        str += "Quick";
+    }
+    else if (isSlow())
+    {
+        str += "Slow";
+    }
+    else if (isPause()) {
+        str += "Pause";
+    }
+    else if (isRainbow()) {
+        str += "Rainbow";
+    }
+    else if (isBlink()) {
+        str += "Blink";
+    }
+    else if (isFade3()) {
+        str += "Fade3";
+    }
+    else if (isFade7()) {
+        str += "Fade7";
+    }
+    else if (isJump3()) {
+        str += "Jump3";
+    }
+    else if (isJump7()) {
+        str += "Jump7";
+    }
+    else if (isDIY1()) {
+        str += "DIY1";
+    }
+    else if (isDIY2()) {
+        str += "DIY2";
+    }
+    else if (isDIY3()) {
+        str += "DIY3";
+    }
+    else if (isDIY4()) {
+        str += "DIY4";
+    }
+    else if (isDIY5()) {
+        str += "DIY5";
+    }
+    else if (isDIY6()) {
+        str += "DIY6";
+    }
+    return str;
+}
+
+
 
 
 void Task::setRainbow(bool doRainbow)
@@ -263,79 +492,79 @@ void Task::setDIY6(bool doDIY6)
 void Task::setChangeColor(bool doChangeColor)
 {
     this->clear();
-    doChangeColor = doChangeColor;
+    this->doChangeColor = doChangeColor;
 }
 
 void Task::setPause(bool doPause)
 {
     this->clear();
-    doPause = doPause;
+    this->doPause = doPause;
 }
 
 void Task::setBrighter(bool doBrighter)
 {
     this->clear();
-    doBrighter = doBrighter;
+    this->doBrighter = doBrighter;
 }
 
 void Task::setDarker(bool doDarker)
 {
     this->clear();
-    doDarker = doDarker;
+    this->doDarker = doDarker;
 }
 
 void Task::setOnOff(bool doOnOff)
 {
     this->clear();
-    doOnOff = doOnOff;
+    this->doOnOff = doOnOff;
 }
 
 void Task::setRedUp(bool doRedUp)
 {
     this->clear();
-    doRedUp = doRedUp;
+    this->doRedUp = doRedUp;
 }
 
 void Task::setRedDown(bool doRedDown)
 {
     this->clear();
-    doRedDown = doRedDown;
+    this->doRedDown = doRedDown;
 }
 
 void Task::setGreenUp(bool doGreenUp)
 {
     this->clear();
-    doGreenUp = doGreenUp;
+    this->doGreenUp = doGreenUp;
 }
 
 void Task::setGreenDown(bool doGreenDown)
 {
     this->clear();
-    doGreenDown = doGreenDown;
+    this->doGreenDown = doGreenDown;
 }
 
 void Task::setBlueUp(bool doBlueUp)
 {
     this->clear();
-    doBlueUp = doBlueUp;
+    this->doBlueUp = doBlueUp;
 }
 
 void Task::setBlueDown(bool doBlueDown)
 {
     this->clear();
-    doBlueDown = doBlueDown;
+    this->doBlueDown = doBlueDown;
 }
 
 void Task::setQuick(bool doQuick)
 {
     this->clear();
-    doQuick = doQuick;
+    this->doQuick = doQuick;
 }
 
 void Task::setSlow(bool doSlow)
 {
     this->clear();
-    doSlow = doSlow;
+    this->doSlow = doSlow;
 }
 
 void Task::clear()
