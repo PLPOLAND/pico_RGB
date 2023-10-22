@@ -38,6 +38,13 @@ Color Color::White()
     return color;
 }
 
+Color Color::Black()
+{
+    Color color;
+    color.set("000000");
+    return color;
+}
+
 Color Color::C1()
 {
     Color color;
@@ -150,6 +157,21 @@ Color Color::C16()
     Color color;
     color.set("6969FF");
     return color;
+}
+
+bool Color::operator==(const Color& color)
+{
+    return this->red == color.red && this->green == color.green && this->blue == color.blue && this->brightness == color.brightness;
+}
+
+bool Color::RGBEqual(const Color& color)
+{
+    return this->red == color.red && this->green == color.green && this->blue == color.blue;
+}
+
+int Color::distance(const Color& color)
+{
+    return std::sqrt( pow(this->red - color.red, 2) + pow(this->green - color.green, 2) + pow(this->blue - color.blue, 2));
 }
 
 Color::~Color()
