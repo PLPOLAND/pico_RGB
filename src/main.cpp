@@ -156,14 +156,14 @@ void IRControlCodetoString(IRControlCode code)
 
 IRControl* ir; // IR diode on pin 5
 RGBController* rgb;
-One_wire sensor = One_wire(10);
+// One_wire sensor = One_wire(10);
 
 void setup() {
   Serial.begin(115200);
   ir = new IRControl(5);
   rgb = new RGBController(0, 1, 2);
 
-  sensor.init();
+  // sensor.init();
 }
 
 void loop() {
@@ -174,9 +174,9 @@ void loop() {
     rgb->setTask(task);
   }
   rgb->tick();
-  rom_address_t addr{};
-  sensor.single_device_read_rom(addr);
-  sensor.set_resolution(addr, 12);
-  sensor.convert_temperature(addr, true, true);
-  Serial.println(sensor.temperature(addr));
+  // rom_address_t addr{};
+  // sensor.single_device_read_rom(addr);
+  // sensor.set_resolution(addr, 12);
+  // sensor.convert_temperature(addr, true, true);
+  // Serial.println(sensor.temperature(addr));
 }
